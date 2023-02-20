@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page session="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>수정</h3>
+${userId }님, ${userName }님	반갑습니다!<br/>
+<a href="/logout">로그아웃</a>
+
 </body>
 </html>
