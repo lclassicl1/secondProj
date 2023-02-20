@@ -5,9 +5,11 @@
 	<title>Home</title>
 </head>
 <body>
+
 <h1>
-	Hello world!  
+	<a href="<%=request.getContextPath()%>/signIn">로그인</a>
 </h1>
+
 
 <P>  The time on the server is ${serverTime}. </P>
 </body>
