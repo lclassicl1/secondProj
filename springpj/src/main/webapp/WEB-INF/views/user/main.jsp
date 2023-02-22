@@ -8,8 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<header><jsp:include page="/resources/module/header.jsp"></jsp:include></header>
 ${userId }님, ${userName }님	반갑습니다!<br/>
 <a href="/logout">로그아웃</a>
 
+<footer><jsp:include page="/resources/module/footer.jsp"></jsp:include></footer>
 </body>
 </html>
