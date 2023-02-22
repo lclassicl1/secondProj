@@ -16,7 +16,8 @@
 		<p>비밀번호 : <form:password path="password" />
 
 		<p><input type="submit" value="가입하기"/>
-		<a href="<%=request.getContextPath()%>/signUp">회원가입</a>
+		<a href="<%=request.getContextPath()%>/signUp">회원가입</a><br/>
+		<a href="<%=request.getContextPath()%>/#">아이디찾기</a><a href="<%=request.getContextPath()%>/#">비밀번호찾기</a>
 	
 	</form:form>
 </body>
