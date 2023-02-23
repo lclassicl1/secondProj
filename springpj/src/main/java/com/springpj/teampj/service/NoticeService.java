@@ -11,4 +11,9 @@ public interface NoticeService {
 	
 	//공지사항 글작성
 	public int noticeInsert(NoticeDTO noticeDTO);
+
+	public NoticeDTO getDetailNotice(int no);
+	
+	//공지사항 글 수정
+	public int updateNotice(NoticeDTO noticeDTO);
 }

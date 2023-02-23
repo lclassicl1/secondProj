@@ -26,4 +26,15 @@ public class NoticeServiceImpl implements NoticeService {
 		return noticeDAOImpl.noticeInsert(noticeDTO);
 	}
 
+	@Override
+	public NoticeDTO getDetailNotice(int no) {
+		return noticeDAOImpl.getDetailNotice(no);
+	}
+	
+	//공지사항 글 수정
+	@Override
+	public int updateNotice(NoticeDTO noticeDTO) {
+		return noticeDAOImpl.updateNotice(noticeDTO);
+	}
+
 }

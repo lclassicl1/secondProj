@@ -27,4 +27,15 @@ public class NoticeDAOImpl implements NoticeDAO {
 		return sqlSession.insert("mapper.notice.noticeInsert",noticeDTO);
 	}
 
+	@Override
+	public NoticeDTO getDetailNotice(int no) {
+		return sqlSession.selectOne("mapper.notice.getDetailNotice", no);
+	}
+
+	//공지사항 글 수정
+	@Override
+	public int updateNotice(NoticeDTO noticeDTO) {
+		return sqlSession.update("mapper.notice.updateNotice", noticeDTO);
+	}
+
 }
