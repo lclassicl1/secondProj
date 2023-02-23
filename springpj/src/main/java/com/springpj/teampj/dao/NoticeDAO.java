@@ -11,4 +11,10 @@ public interface NoticeDAO {
 	
 	//공지사항 글작성
 	public int noticeInsert(NoticeDTO noticeDTO);
+	
+	//공지사항 해당 글 상세보기
+	public NoticeDTO getDetailNotice(int no);
+
+	//공지사항 글 수정
+	public int updateNotice(NoticeDTO noticeDTO);
 }

@@ -26,7 +26,7 @@
 	<%-- 게시글정보: ${noticeList} --%>
 	<table border="1">
 		<tr>
-			<th>번호</th><th>제목</th><th>작성자</th><th>작성시간</th><th>조회수</th>
+			<th><input type="checkbox"/></th><th>번호</th><th>제목</th><th>작성자</th><th>작성시간</th><th>조회수</th>
 		</tr>
 		<c:if test="${empty noticeList}">
 		<tr>
@@ -36,8 +36,9 @@
 		<c:if test="${not empty noticeList}">
 			<c:forEach items="${noticeList}" var="list">
 			<tr> 
+				<td><input type="checkbox"/></td>
 				<td>${list.no}</td>
-				<td>${list.title}</td>
+				<td><a href="${path}/notice/read?no=${list.no}">${list.title}</a></td>
 				<td>${list.writername}</td>
 				<td>${list.regdate}</td>
 				<td>${list.readcnt}</td>

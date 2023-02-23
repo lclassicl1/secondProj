@@ -29,4 +29,22 @@
 			values(#{writername},#{title},#{content})	
 		]]>
 	</select>
+	
+	<!-- 공지사항 글 상세보기 -->
+	<select id="getDetailNotice" resultType="noticeDTO" parameterType="java.lang.Integer">
+		<![CDATA[
+			select *
+			from notice
+			where no = #{no}
+		]]>
+	</select>
+	
+	<!-- 공지사항 글 수정 -->
+	<select id="updateNotice" resultType="java.lang.Integer" parameterType="noticeDTO">
+		<![CDATA[
+			update notice
+			set title=#{title}, content=#{content}, modidate=now()
+			where no = #{no}
+		]]>
+	</select>
 </mapper>
