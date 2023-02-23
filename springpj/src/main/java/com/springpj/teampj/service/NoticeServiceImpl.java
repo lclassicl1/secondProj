@@ -1,5 +1,7 @@
 package com.springpj.teampj.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +15,15 @@ public class NoticeServiceImpl implements NoticeService {
 	
 	
 	@Override
-	public int getNoticeList() {
-		int result = noticeDAOImpl.getNoticeList();
-		return result;
+	public List<NoticeDTO> getNoticeList() {
+		List<NoticeDTO> noticeList = noticeDAOImpl.getNoticeList();
+		return noticeList;
+	}
+
+	//공지사항 글 작성
+	@Override
+	public int noticeInsert(NoticeDTO noticeDTO) {
+		return noticeDAOImpl.noticeInsert(noticeDTO);
 	}
 
 }
