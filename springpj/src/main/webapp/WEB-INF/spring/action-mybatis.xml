@@ -19,7 +19,7 @@
  
 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
       <property name="dataSource" ref="dataSource" />
-      <!-- <property name="configLocation" value="classpath:mybatis/model/modelConfig.xml"/> --> <!-- 모델 관련 부분 -->
+      <property name="configLocation" value="classpath:mybatis/model/modelConfig.xml"/> <!-- 모델 관련 부분 -->
       <property name="mapperLocations" value="classpath:mybatis/mappers/*.xml" /> <!-- crud 쿼리문들을 xml 파일의 형태로 mapper 밑에 위치하게한다 -->
 </bean>
 
